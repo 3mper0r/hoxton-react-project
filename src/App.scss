@@ -62,9 +62,8 @@ aside {
   color: white;
   opacity: 0.8;
   &:hover {
-    opacity: 1;
-  }
-
+   opacity: 1;
+  } 
 }
 
 .success-button {
@@ -225,4 +224,17 @@ body {
   gap: 1rem;
 }
 
+.font-title {
+  display: inline-grid;
+  position: absolute;
+  top: 5%;
+  left: 45%;
+}
+
+.make-me-pretty {
+  display: inline-grid;
+  position: absolute;
+  top: 25%;
+  left: 45%;
+}
 

@@ -11,6 +11,11 @@ export function InputPage() {
         setStyle(updatedPadding)
     }
 
+    const setTextAlign = (talign) => {
+        setStyle({
+            ...style, textAlign: String(talign.target.value)
+        })
+    }
 
     const setBorderWidth = (bwidth) => {
         setStyle({
@@ -24,14 +29,19 @@ export function InputPage() {
 
         })
 
+    const setBorderStyle = (bstyle) =>
+        setStyle({
+            ...style, borderStyle: String(bstyle.target.value)
+        })
+
     return <>
-        <h2 className="input-title">Style your input</h2>
-        <input type="search" className="style-me" placeholder="style me" />
+        <h1 className="input-title">Style your input</h1>
+        <input type="search" className="style-me" placeholder="style me" style={style} />
         <section className="input-config">
             <label htmlFor="padding">Padding:</label>
-            <input type="range" name="padding" min={0} max={20} defaultValue={0} step={2} onChange={setPadding} />
+            <input type="range" name="padding" min={0} max={40} defaultValue={0} step={2} onChange={setPadding} />
             <label htmlFor="text-align">Text Align:</label>
-            <select name="text-align" id="text-align">
+            <select name="text-align" id="text-align" onChange={setTextAlign} >
                 <option value="left">Left</option>
                 <option value="center">Center</option>
                 <option value="right">Right</option>
@@ -43,7 +53,7 @@ export function InputPage() {
             <input type="range" name="border-radius" min={0} max={48} defaultValue={0} step={3} onChange={setRadius} />
 
             <label htmlFor="border-style">Border Style:</label>
-            <select name="border-style" id="border-style" >
+            <select name="border-style" id="border-style" onChange={setBorderStyle}>
                 <option value="solid">Solid</option>
                 <option value="dashed">Dashed</option>
                 <option value="dotted">Dotted</option>
