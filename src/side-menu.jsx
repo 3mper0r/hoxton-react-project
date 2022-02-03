@@ -24,10 +24,10 @@ export function SideMenu() {
     return (
         <Aside>
             <div>
-                <Link to={'/buttons'} style={styledLinks}>Buttons</Link>
+                <Link to={'/buttons'} style={styledLinks}>Button</Link>
             </div>
             <div>
-                <Link to={'/inputs'} style={styledLinks}>Inputs</Link>
+                <Link to={'/inputs'} style={styledLinks}>Input</Link>
             </div>
             <div>
                 <Link to={'/color'} style={styledLinks}>Color</Link>

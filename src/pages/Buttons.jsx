@@ -4,9 +4,24 @@ import { useState } from 'react'
 export function ButtonPage() {
 
     const [style, setStyle] = useState({})
-    const [padding, setPadding] = useState([
-        1, 2, 3
-    ])
+
+    const setPadding = (padding) => {
+        const userPreference = Number(padding.target.value);
+        const updatedPadding = { ...style, padding: userPreference }
+        setStyle(updatedPadding)
+    }
+
+    const setBackground = (background) =>
+        setStyle({
+            ...style, backgroundColor: String(background.target.value)
+        })
+
+    const setRadius = (radius) =>
+        setStyle({
+            ...style, borderRadius: Number(radius.target.value)
+
+        })
+
 
     const changeToPrimary = () => {
         setStyle(
@@ -67,15 +82,15 @@ export function ButtonPage() {
     }
 
     return <>
-        <h1 className="testtt">Customize</h1>
+        <h1 className="button-title">Customize your button</h1>
         <button style={style} className="make-me-better-button">Make me better</button>
         <section className="button-config">
             <label htmlFor="padding">Padding:</label>
-            <input type="range" name="padding" min={0} max={3} defaultValue={0} step={1} />
+            <input type="range" name="padding" min={0} max={20} defaultValue={0} step={2} onChange={setPadding} />
             <label htmlFor="background-color">Background color:</label>
-            <input type="color" name="background-color" />
+            <input type="color" name="background-color" onChange={setBackground} />
             <label htmlFor="border-radius">Border radius:</label>
-            <input type="range" name="border-radius" min={0} max={5} defaultValue={0} step={1} />
+            <input type="range" name="border-radius" min={0} max={48} defaultValue={0} step={3} onChange={setRadius} />
 
         </section>
 

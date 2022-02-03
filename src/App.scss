@@ -19,16 +19,18 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-}
-
 aside {
   display: inline-grid;
 }
 
-.testtt, .customized-buttons {
+.button-title, .customized-buttons {
   display: inline-grid;
+}
+
+.button-title {
+  position: absolute;
+  left: 37%;
+  margin-top: 1rem;
 }
 
 .customized-buttons {
@@ -111,7 +113,7 @@ aside {
   font-size: 2rem;
   position: absolute;
   left: 40%;
-  top: 10%;
+  top: 20%;
   
   animation: spin 1000ms alternate linear;
 
@@ -122,7 +124,7 @@ aside {
   grid-template-columns: 1fr 1fr;
   position: absolute;
   left: 35%;
-  top: 20%;
+  top: 35%;
   width: 25%;
   gap: 1rem;
 }
@@ -138,5 +140,89 @@ aside {
   
 }
 
+body {
+  background-color: #dd96b0;
+}
+
+.boxshadow-title {
+  display: inline;
+}
+.box-shadow {
+  display: inline-grid;
+  width: 200px;
+  height: 200px;
+  padding: 1rem;
+  outline: 1px solid black;
+  place-content: center;
+  font-size: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 15%;
+
+  animation: spin 1000ms alternate linear;
+}
+
+.box-shadow > span {
+  text-align: center;
+}
+.box-shadow {
+  background-color: #1c6ea4;
+  color: wheat;
+}
+
+.box-shadow-config {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  width: 35%;
+  gap: 1rem;
+}
+
+.boxshadow-title {
+  position: absolute;
+  left: 47%;
+  margin-top: 2rem;
+}
+
+.input-title {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  margin-top: 2rem;
+  text-align: center;
+  
+}
+
+.style-me {
+  
+  position: absolute;
+  left: 40%;
+  top: 15%;
+  height: 2rem;
+  width: 30%;
+  text-align: center;
+}
+
+.input-config {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  width: 35%;
+  gap: 1rem;
+}
+
+.font-config {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  left: 35%;
+  top: 40%;
+  width: 35%;
+  gap: 1rem;
+}
 
 
