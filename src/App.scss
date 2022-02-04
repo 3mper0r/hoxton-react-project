@@ -13,14 +13,24 @@
   color: white;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:wght@100;200;600&display=swap');
+
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: #a1d9b4;
+}
+
 aside {
   display: inline-grid;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
 }
 
 .button-title, .customized-buttons {
@@ -139,9 +149,11 @@ aside {
   
 }
 
-body {
-  background-color: #dd96b0;
-}
+// body {
+//    background-color: #91AEC1;
+  
+
+// }
 
 .boxshadow-title {
   display: inline;
@@ -236,5 +248,416 @@ body {
   position: absolute;
   top: 25%;
   left: 45%;
+}
+
+.gradient-title {
+  display: inline-grid;
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  // background: linear-gradient( to right,#172347, #025385,   #038298, #0EF3C5, #015268,);
+  background: linear-gradient( to left, rgb(187, 20, 220), rgb(40, 160, 207));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Montserrat' sans-serif;
+  letter-spacing: 6px;
+  
+}
+
+.taste-it {
+  position: absolute;
+  left: 49%;
+  top: 25%;
+  background: radial-gradient(#025385, #172347, #038298,   #015268, #0EF3C5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 6px;
+}
+
+.canada {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}
+
+.canada button {
+  width: 25rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  background: linear-gradient( to left, rgb(40, 160, 207), rgb(187, 20, 220));
+  // background: radial-gradient( #172347, #025385,  #04E2B7, #038298, #015268,#0EF3C5);
+  color: #0EF3C5;
+  border: hidden;
+  font-size: 1rem;
+  box-shadow:
+  8px 8px 10px 0px rgb(20, 255, 196),
+  -5px -5px 5px 0px rgb(26, 146, 120),
+  5px 5px 15px 0px rgb(187, 255, 0);;
+
+}
+
+.norway {
+    position: absolute;
+    left: 45%;
+    top: 60%;
+}
+
+.norway button {
+  width: 25rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  background: linear-gradient( to left, rgb(40, 160, 207), rgb(187, 20, 220));
+  // background: radial-gradient( #172347, #025385,  #04E2B7, #038298, #015268,#0EF3C5);
+  color: #0EF3C5;
+  border: hidden;
+  font-size: 1rem;
+  box-shadow:
+  8px 8px 10px 0px rgb(20, 255, 196),
+  -5px -5px 5px 0px rgb(26, 146, 120),
+  5px 5px 15px 0px rgb(187, 255, 0);;
+
+}
+
+.kosova {
+  position: absolute;
+  left: 45%;
+  top: 75%;
+}
+.kosova button {
+  width: 25rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  background: linear-gradient( to left, rgb(40, 160, 207), rgb(187, 20, 220));
+  // background: radial-gradient( #172347, #025385,  #04E2B7, #038298, #015268,#0EF3C5);
+  color: #0EF3C5;
+  border: hidden;
+  font-size: 1rem;
+  box-shadow:
+  8px 8px 10px 0px rgb(20, 255, 196),
+  -5px -5px 5px 0px rgb(26, 146, 120),
+  5px 5px 15px 0px rgb(187, 255, 0);;
+
+}
+
+.enjoy-your-trip {
+  display: inline-grid;
+  position: absolute;
+  top: 5%;
+  left: 45%;
+}
+
+.input-vsCode {
+  display: grid;
+  text-align: start;
+  letter-spacing: 0.3rem;
+  background-color: #1e293b;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 220%;
+}
+
+.vscode-code {
+  color: #BEF264;
+  
+}
+  
+  
+.vscode-value {
+  color: #108ead;
+}
+
+.colon {
+  color: white;
+}
+
+// .turn-back {
+//   position: absolute;
+//   top: 5%;
+//   left:40%;
+//   display:inline-grid
+// }
+
+// ----Aurora Canada----
+@keyframes northern {
+  0% {
+    transform: translate(5%, -2%);
+  }
+
+  25% {
+    transform: translate(10%, 7%);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: translate(7%, -2%);
+  }
+
+  85% {
+    transform: translate(6%, 3%) rotate(12deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.container {
+  float: right;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: static;
+}
+
+.auroral-northern {
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  animation-name: northern;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: linear-gradient(10deg, #a1d9b4 20%, #32988a 40%, #025385 55%, #038298 70%, #000e3c 85%);
+}
+
+/* We start with setting the variables: how many stars there should be and an empty variable declaration for later */
+$star-number: 100;
+$current-stars: null ;
+
+/* Now we just style this one 1px by 1px div to be a round dot fixed in top left corner */
+.auroral-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: white;
+
+  /* We count down from the number of stars that we chose to have: */
+  @while $star-number > 0 {
+  
+    /* And with each iteration we concatenate string with another box shadow declaration.
+    We set random position for the box shadow and random size (from 1 to 2 px).
+    The last thing to add is a comma, but we need to use and unquote function to add that */
+  
+    $current-stars: $current-stars
+                    + (random(100) +vw) (random(50) +vh) 0 (random(2) +px) rgba(255,255,255,.7)
+                    + unquote(", ");
+  
+    /* The last box shadow needs to be added without a comma. 
+     After we have the whole string ready, we add it to the box-shadow as a value */
+    @if $star-number == 1 {
+      $current-stars: $current-stars
+                      + (random(100) +vw) (random(50) +vh) 0 0 rgba(255,255,255,.9);
+      box-shadow: $current-stars;
+    }
+    
+    /* Remember to count down. Otherwise you will end up with an infinite loop */
+    $star-number: $star-number - 1;
+  }
+}
+
+// ---Aurora Norway---
+@keyframes northern {
+  0% {
+    transform: translate(5%, -2%);
+  }
+
+  25% {
+    transform: translate(10%, 7%);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: translate(7%, -2%);
+  }
+
+  85% {
+    transform: translate(6%, 3%) rotate(12deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.container-norway {
+  float: right;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: static;
+  &aside {
+    visibility: hidden;
+  }
+}
+
+.auroral-northern-norway {
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  animation-name: northern;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: linear-gradient(10deg, #108eadd9 20%, #23ca84 35%, #0fa151 50%, #07282e 65%, #aba9c4 85%);
+  &aside{
+    visibility: hidden;
+  }
+}
+
+/* We start with setting the variables: how many stars there should be and an empty variable declaration for later */
+$star-number: 100;
+$current-stars: null ;
+
+/* Now we just style this one 1px by 1px div to be a round dot fixed in top left corner */
+.auroral-stars-norway {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: white;
+  &aside {
+    visibility: hidden;
+  }
+
+  /* We count down from the number of stars that we chose to have: */
+  @while $star-number > 0 {
+  
+    /* And with each iteration we concatenate string with another box shadow declaration.
+    We set random position for the box shadow and random size (from 1 to 2 px).
+    The last thing to add is a comma, but we need to use and unquote function to add that */
+  
+    $current-stars: $current-stars
+                    + (random(100) +vw) (random(50) +vh) 0 (random(2) +px) rgba(255,255,255,.7)
+                    + unquote(", ");
+  
+    /* The last box shadow needs to be added without a comma. 
+     After we have the whole string ready, we add it to the box-shadow as a value */
+    @if $star-number == 1 {
+      $current-stars: $current-stars
+                      + (random(100) +vw) (random(50) +vh) 0 0 rgba(255,255,255,.9);
+      box-shadow: $current-stars;
+    }
+    
+    /* Remember to count down. Otherwise you will end up with an infinite loop */
+    $star-number: $star-number - 1;
+  }
+}
+
+// ---Aurora Kosova---
+
+// ---Aurora Norway---
+@keyframes northern {
+  0% {
+    transform: translate(5%, -2%);
+  }
+
+  25% {
+    transform: translate(10%, 7%);
+  }
+
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  60% {
+    transform: translate(7%, -2%);
+  }
+
+  85% {
+    transform: translate(6%, 3%) rotate(12deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+.container-kosova {
+  float: right;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: static;
+  &aside {
+    visibility: hidden;
+  }
+}
+
+.auroral-northern-kosova {
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  animation-name: northern;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background: linear-gradient(10deg, #108eadd9 20%, #00076f 35%, #44008b 50%, #9f45b0 65%, #e54ed0 85%, #ffe4f2 100%);
+  &aside{
+    visibility: hidden;
+  }
+}
+
+/* We start with setting the variables: how many stars there should be and an empty variable declaration for later */
+$star-number: 100;
+$current-stars: null ;
+
+/* Now we just style this one 1px by 1px div to be a round dot fixed in top left corner */
+.auroral-stars-kosova {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: white;
+  &aside {
+    visibility: hidden;
+  }
+
+  /* We count down from the number of stars that we chose to have: */
+  @while $star-number > 0 {
+  
+    /* And with each iteration we concatenate string with another box shadow declaration.
+    We set random position for the box shadow and random size (from 1 to 2 px).
+    The last thing to add is a comma, but we need to use and unquote function to add that */
+  
+    $current-stars: $current-stars
+                    + (random(100) +vw) (random(50) +vh) 0 (random(2) +px) rgba(255,255,255,.7)
+                    + unquote(", ");
+  
+    /* The last box shadow needs to be added without a comma. 
+     After we have the whole string ready, we add it to the box-shadow as a value */
+    @if $star-number == 1 {
+      $current-stars: $current-stars
+                      + (random(100) +vw) (random(50) +vh) 0 0 rgba(255,255,255,.9);
+      box-shadow: $current-stars;
+    }
+    
+    /* Remember to count down. Otherwise you will end up with an infinite loop */
+    $star-number: $star-number - 1;
+  }
 }
 

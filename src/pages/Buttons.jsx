@@ -53,6 +53,11 @@ export function ButtonPage() {
             darkButton
         )
     }
+    const setColor = (fcolor) => {
+        setStyle({
+            ...style, color: String(fcolor.target.value)
+        })
+    }
 
 
 
@@ -81,7 +86,9 @@ export function ButtonPage() {
         color: "white"
     }
 
+
     return <>
+
         <h1 className="button-title">Customize your button</h1>
         <button style={style} className="make-me-better-button">Make me better</button>
         <section className="button-config">
@@ -91,7 +98,8 @@ export function ButtonPage() {
             <input type="color" name="background-color" onChange={setBackground} />
             <label htmlFor="border-radius">Border radius:</label>
             <input type="range" name="border-radius" min={0} max={48} defaultValue={0} step={3} onChange={setRadius} />
-
+            <label htmlFor="color">Font Color:</label>
+            <input type="color" name="color" onChange={setColor} />
         </section>
 
         <div className="customized-buttons">

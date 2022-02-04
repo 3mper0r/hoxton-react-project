@@ -1,5 +1,10 @@
 export * from './Buttons'
 export * from './Input'
-export * from './Color'
+export * from './Gradient'
 export * from './Font'
 export * from './Box-shadow'
+export * from './Canada'
+export * from './Norway'
+export * from './Kosova'
+export * from 'fireworks-js'
+

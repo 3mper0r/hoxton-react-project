@@ -3,7 +3,12 @@ import { useState } from "react"
 export function InputPage() {
 
 
-    const [style, setStyle] = useState({})
+    const [style, setStyle] = useState(
+        { borderStyle: 'solid', padding: 0, borderWidth: 0, borderRadius: 0, textAlign: 'center' },
+
+    )
+
+    const [currentAdjustment, setCurrentAjdusment] = useState({})
 
     const setPadding = (padding) => {
         const userPreference = Number(padding.target.value);
@@ -15,6 +20,7 @@ export function InputPage() {
         setStyle({
             ...style, textAlign: String(talign.target.value)
         })
+        setCurrentAjdusment('textAlign')
     }
 
     const setBorderWidth = (bwidth) => {
@@ -64,6 +70,15 @@ export function InputPage() {
                 <option value="ridge">Ridge</option>
                 <option value="hidden">Hidden</option>
             </select>
+
+            <div className="input-vsCode">
+                {/*{currentAdjustment === 'padding' ? */<p> <span className="vscode-code">padding</span><span className="colon"> :</span> <span className="vscode-value">{style.padding}px;</span> </p> /*: null}*/}
+                {/*{currentAdjustment === 'textAlign' ? */<p> <span className="vscode-code">text-align</span><span className="colon"> :</span> <span className="vscode-value">{style.textAlign};</span> </p> /*: null}*/}
+                {/*currentAdjustment === 'borderWidth' ? */<p><span className="vscode-code"> border-width</span><span className="colon"> :</span> <span className="vscode-value">{style.borderWidth}px;</span> </p> /*: null}*/}
+                {/*currentAdjustment === 'borderRadius' ? */<p><span className="vscode-code"> border-radius</span><span className="colon"> :</span> <span className="vscode-value">{style.borderRadius}px;</span> </p> /*: null}*/}
+                {/* {currentAdjustment === 'borderStyle' ? */<p><span className="vscode-code"> border-style</span><span className="colon"> :</span> <span className="vscode-value">{style.borderStyle};</span> </p> /*: null}*/}
+
+            </div>
 
         </section>
     </>

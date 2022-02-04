@@ -21,7 +21,11 @@ export function Font() {
             ...font, fontSize: Number(fsize.target.value)
         })
     }
-
+    const setColor = (fcolor) => {
+        setFont({
+            ...font, color: String(fcolor.target.value)
+        })
+    }
     const setFontWeight = (fweight) => {
         setFont({
             ...font, fontWeight: String(fweight.target.value)
@@ -54,6 +58,8 @@ export function Font() {
             </select>
             <label htmlFor="font-size">Font Size:</label>
             <input type="range" name="font-size" min={12} max={50} defaultValue={16} step={1} onChange={setFontSize} />
+            <label htmlFor="color">Color:</label>
+            <input type="color" name="color" onChange={setColor} />
             <label htmlFor="font-weight">Font Weight:</label>
             <select name="font-weight" id="font-weight" onChange={setFontWeight}>
                 <option value="normal">Normal</option>

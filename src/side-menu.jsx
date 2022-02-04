@@ -30,13 +30,13 @@ export function SideMenu() {
                 <Link to={'/inputs'} style={styledLinks}>Input</Link>
             </div>
             <div>
-                <Link to={'/color'} style={styledLinks}>Color</Link>
-            </div>
-            <div>
                 <Link to={'/font'} style={styledLinks}>Font</Link>
             </div>
             <div>
                 <Link to={'/box-shadow'} style={styledLinks}>Box Shadow</Link>
+            </div>
+            <div>
+                <Link to={'/gradient'} style={styledLinks}>Gradient</Link>
             </div>
         </Aside>
     )

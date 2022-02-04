@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Fireworks } from 'fireworks-js/dist/react'
 import './App.scss'
 import { SideMenu } from './side-menu'
 import {
@@ -9,14 +10,15 @@ import {
 import {
   ButtonPage,
   InputPage,
-  Color,
+  Gradient,
   Font,
-  BoxShadow
+  BoxShadow,
+  Canada,
+  Norway,
+  Kosova,
 } from './pages';
 
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className="App">
@@ -27,9 +29,13 @@ function App() {
       <Routes>
         <Route path="/buttons" element={<ButtonPage />} />
         <Route path="/inputs" element={<InputPage />} />
-        <Route path="/color" element={<Color />} />
         <Route path="/font" element={<Font />} />
         <Route path="/box-shadow" element={<BoxShadow />} />
+        <Route path="/gradient" element={<Gradient />} />
+        <Route path="/gradient/canada" element={<Canada />} />
+        <Route path="/gradient/norway" element={<Norway />} />
+        <Route path="/gradient/kosova" element={<Kosova />} />
+
       </Routes>
     </div>
   )
